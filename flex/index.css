@@ -1,0 +1,13 @@
+.container {
+    text-align: center;
+    display: flex;
+}
+.left, .right {
+    flex: 50%;
+}
+.left {
+    background-color: yellow;
+}
+.right {
+    background-color: red;
+}

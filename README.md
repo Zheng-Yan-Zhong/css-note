@@ -1,13 +1,13 @@
 # CSS
 
 ## Table of Contents
-- [CSS](#css)
-  - [Table of Contents](#table-of-contents)
-  - [* prefix](#-prefix)
   - [selector](#selector)
   - [weighting](#weighting)
-  - [multy class](#multy-class)
+  - [multi class](#multi-class)
   - [prefix](#prefix)
+  - [SASS/SCSS](#sassscss)
+  - [Flex](#flex)
+  - [Grid](#grid)
 ---
 
 ## selector
@@ -79,6 +79,8 @@ div {
 ```
 
 ---
+[⬆️ back to Contents](#table-of-contents)
+
 
 ## weighting
 * element = 1
@@ -184,8 +186,10 @@ div > div > p {
 ![](./selector/images/1-7.png)
 
 ---
+[⬆️ back to Contents](#table-of-contents)
 
-## multy class 
+
+## multi class 
 
 假設我只想讓有root跟blue類別的元素顏色變藍
 
@@ -236,6 +240,8 @@ div > div > p {
 由此可知我們大概了解在CSS中的空格相當於元素中的子元素
 
 ---
+[⬆️ back to Contents](#table-of-contents)
+
 
 ## prefix
 在各瀏覽器中實現CSS都不太相同
@@ -250,3 +256,117 @@ div > div > p {
 ```css
 -webkit-backdrop-filter: blur(10px)
 ```
+[⬆️ back to Contents](#table-of-contents)
+
+## SASS/SCSS
+[uide](https://sass-lang.com/guide)
+
+SASS/SCSS是CSS的預處理器,最終還是會轉譯成CSS
+![](./SASS/images/transform.png)
+
+而SCSS和SASS最主要的差別在於
+
+SCSS一樣維持跟CSS一樣有Block,而SASS則是縮排方式
+
+SCSS
+![](SASS/images/scss.png)
+
+SASS
+![](SASS/images/sass.png)
+
+---
+
+[⬆️ back to Contents](#table-of-contents)
+
+## display
+* inline
+* block
+* inline-block
+* none
+
+### block
+元素保有換行、間距
+
+```html
+    <div>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam <p class="inline">Hello</p>pmodi perferendis soluta mollitia totam iure, quidem neque ex sapiente! Quasi modi enim quidem molestias error laboriosam et hic laudantium harum.</p>
+    </div>
+```
+
+```css
+.inline {
+    background-color: yellow;
+    color: red;
+    display: block;
+}
+```
+![](../html-note/display/images/2-1.png)
+
+### inline
+元素沒有block效果,與旁邊的元素成同一行
+
+```css
+.inline {
+    background-color: yellow;
+    color: red;
+    display: inline;
+}
+```
+![](../html-note/display/images/2-2.png)
+
+### inline-block
+保有上下兼具,也能和周圍元素同一行
+
+```css
+.inline {
+    background-color: yellow;
+    color: red;
+    display: inline-block;
+}
+```
+![](../html-note/display/images/2-3.png)
+
+---
+
+[⬆️ back to Contents](#table-of-contents)
+
+## Flex
+* flex-grow
+* flex-shrink
+* flex-basis
+
+```html
+<div class="container">
+    <div class="left">1</div>
+    <div class="right">2</div>
+</div>
+```
+![](../html-note/flex/images/3-1.png)
+
+添加CSS之後
+
+```css
+.container {
+    text-align: center;
+    display: flex;
+}
+.left, .right {
+    flex: 50%;
+}
+.left {
+    background-color: yellow;
+}
+.right {
+    background-color: red;
+}
+```
+
+![](../html-note/flex/images/3-2.png)
+
+---
+[⬆️ back to Contents](#table-of-contents)
+
+## Grid
+---
+[⬆️ back to Contents](#table-of-contents)
+
