@@ -429,16 +429,39 @@ SASS
 ---
 
 ### flex-wrap
+在flex中由於是彈性伸縮,有時候我們需要保證元素有最少的寬
 
----
+這時候flex-wrap可以使元素換行
 
-### justify
+![](../html-note/flex/images/flex-wrap-1.gif)
 
----
+```css
+flex-wrap: wrap;
+```
 
-### align
+![](../html-note/flex/images/flex-wrap-2.gif)
 
+而我們可以搭配flex-grow使元素換行之後能夠填滿寬
 
+```css
+.container {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+.left, .right {
+    flex-grow: 1;
+    flex-basis: 300px;
+}
+.left {
+    background-color: yellow;
+}
+.right {
+    background-color: red;
+}
+```
+
+![](../html-note/flex/images/flex-wrap-3.gif)
 
 ---
 [⬆️ back to Contents](#table-of-contents)
