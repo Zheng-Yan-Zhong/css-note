@@ -3,7 +3,7 @@
     display: flex;
 }
 .left, .right {
-    flex: 50%;
+    flex: 1;
 }
 .left {
     background-color: yellow;

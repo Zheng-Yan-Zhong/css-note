@@ -150,7 +150,7 @@ div p {
 
 ![](./selector/images/1-6.png)
 
-但這樣會有個問題,會變成只要div中有p的元素,就會被選取
+但這樣會有個問題,變成只要div中有p的元素,就會被選取
 
 我們透過 `>`強調,是該元素的子元素才會被選取
 
@@ -269,9 +269,11 @@ SASS/SCSS是CSS的預處理器,最終還是會轉譯成CSS
 SCSS一樣維持跟CSS一樣有Block,而SASS則是縮排方式
 
 SCSS
+
 ![](SASS/images/scss.png)
 
 SASS
+
 ![](SASS/images/sass.png)
 
 ---
@@ -285,7 +287,7 @@ SASS
 * none
 
 ### block
-元素保有換行、間距
+元素保有換行、間距,可設置width
 
 ```html
     <div>
@@ -303,7 +305,7 @@ SASS
 ![](../html-note/display/images/2-1.png)
 
 ### inline
-元素沒有block效果,與旁邊的元素成同一行
+元素沒有block效果,與旁邊的元素成同一行,並且沒辦法更改width
 
 ```css
 .inline {
@@ -315,7 +317,7 @@ SASS
 ![](../html-note/display/images/2-2.png)
 
 ### inline-block
-保有上下兼具,也能和周圍元素同一行
+保有上下兼具,也能和周圍元素同一行,並且能更改width
 
 ```css
 .inline {
@@ -351,7 +353,31 @@ SASS
     display: flex;
 }
 .left, .right {
-    flex: 50%;
+    flex-basis: 100px;
+}
+.left {
+    background-color: yellow;
+}
+.right {
+    background-color: red;
+}
+
+```
+
+![](../html-note/flex/images/3-2.png)
+
+---
+
+### flex-basis
+預設flex的元素為多少寬
+
+```css
+.container {
+    text-align: center;
+    display: flex;
+}
+.left, .right {
+    flex-basis: 100px;
 }
 .left {
     background-color: yellow;
@@ -361,7 +387,58 @@ SASS
 }
 ```
 
-![](../html-note/flex/images/3-2.png)
+![](../html-note/flex/images/3-3.png)
+
+---
+
+### flex-grow
+元素成長的比例
+以下左元素為2/3,右元素為1/3
+
+```css
+.container {
+    text-align: center;
+    display: flex;
+}
+.left, .right {
+
+}
+.left {
+    background-color: yellow;
+    flex-grow: 2;
+}
+.right {
+    background-color: red;
+    flex-grow: 1;
+}
+```
+![](../html-note/flex/images/3-4.png)
+
+---
+
+### flex-shrink
+使元素收縮倍率
+```css
+
+```
+
+---
+
+### flex-direction
+
+---
+
+### flex-wrap
+
+---
+
+### justify
+
+---
+
+### align
+
+
 
 ---
 [⬆️ back to Contents](#table-of-contents)
@@ -370,3 +447,7 @@ SASS
 ---
 [⬆️ back to Contents](#table-of-contents)
 
+## Align
+
+---
+[⬆️ back to Contents](#table-of-contents)
